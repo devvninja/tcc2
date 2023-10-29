@@ -1,0 +1,8 @@
+[
+  { "id": "1", "name": "Ana", "cidade": "Campinas"},
+    { "id": "2", "name": "Bia", "cidade": "Sumaré"},
+    { "id": "3", "name": "Carol", "cidade": "Americana"},
+    { "id": "4", "name": "Fulana", "cidade": "Vinhedo"},
+    { "id": "5", "name": "Tal", "cidade": "Indaiatuba"}
+
+]

@@ -1,0 +1,49 @@
+<mat-table  [dataSource]="grade">
+  <!-- id Column -->
+  <ng-container matColumnDef="idcliente">
+    <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+    <mat-cell  *matCellDef="let grade">{{ grade.idcliente }}</mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="nome">
+    <mat-header-cell *matHeaderCellDef>Nome</mat-header-cell>
+    <mat-cell *matCellDef="let grade">{{ grade.nome }}</mat-cell>
+  </ng-container>
+
+
+  <!-- Email Column -->
+  <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
+    <mat-cell *matCellDef="let grade">{{ grade.email }}
+      <!-- Exemplo de ícone-->
+    </mat-cell>
+  </ng-container>
+
+  <!-- Botao de Acao -->
+  <ng-container matColumnDef="acoes">
+    <mat-header-cell  *matHeaderCellDef>
+      <button mat-mini-fab color="accent" (click)="onAdd()"  aria-label="Adicionar um Curriculo">
+        <mat-icon>add</mat-icon>
+      </button>
+    </mat-header-cell>
+
+    <mat-cell *matCellDef="let grade" class="action-column">
+      <button mat-mini-fab color="primary"  aria-label="Visualizar Curriculo" (click)="onView(grade)">
+        <mat-icon>visibility</mat-icon>
+      </button>
+
+      <button mat-mini-fab color="warn" aria-label="Remover Curriculo" (click)="onDelete(grade)">
+        <mat-icon>delete</mat-icon>
+
+
+      </button>
+
+
+    </mat-cell>
+
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>

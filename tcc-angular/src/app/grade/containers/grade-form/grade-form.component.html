@@ -1,0 +1,43 @@
+<mat-card>
+
+  <mat-toolbar color="primary">Currículo</mat-toolbar>
+
+  <mat-card-content>
+    <br>
+    <form [formGroup]="form" class="min-width">
+      <mat-form-field  class="full-width">
+        <label class="active" style="font-size: 17px;">Nome</label>
+        <input matInput formControlName="nome">
+      </mat-form-field>
+
+      <mat-form-field  class="full-width">
+        <label class="active" style="font-size: 17px;">Email</label>
+        <input matInput formControlName="email">
+      </mat-form-field>
+
+      <mat-form-field  class="full-width">
+        <label class="active" style="font-size: 17px;">Telefone</label>
+        <input matInput formControlName="telefone">
+      </mat-form-field>
+
+      <mat-form-field  class="full-width">
+        <label class="active" style="font-size: 17px;">Habilidade</label>
+        <textarea matInput formControlName="habilidade" rows="3"></textarea>
+      </mat-form-field>
+
+      <mat-form-field  class="full-width">
+        <label class="active" style="font-size: 17px;">Graduação</label>
+        <textarea matInput formControlName="graduacao" rows="3"></textarea>
+      </mat-form-field>
+
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button class= "botao" mat-raised-button color="primary" (click)="onVoltar()"> Voltar </button>
+    <button class= "botao" mat-raised-button color="primary" (click)="onSubmit()"> Salvar </button>
+    <button class="botao" mat-raised-button color="warn" (click)="onExcluir()"> Excluir </button>
+
+  </mat-card-actions>
+
+</mat-card>

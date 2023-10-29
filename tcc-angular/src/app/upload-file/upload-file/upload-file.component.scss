@@ -1,0 +1,24 @@
+@import '~materialize-css/dist/css/materialize.min.css';
+
+
+mat-card {
+  width: 1100px;
+  overflow: auto;
+  max-height: 600px;
+  max-width: 80%;
+  margin: 6em auto;
+  text-align: center;
+}
+
+.full-width{
+  width: 100%;
+}
+
+.min-width {
+  width: 100%;
+  min-width: 150px;
+}
+
+
+
+
